@@ -1,6 +1,6 @@
 # 🍳 Smart Chef AI
 
-![Smart Chef AI Banner]
+![Smart Chef AI Banner]([URL_GAMBAR_SCREENSHOT_LO_DISINI_ATAU_HAPUS_JIKA_TIDAK_ADA])
 
 Smart Chef AI adalah aplikasi web *fullstack* cerdas yang berfungsi sebagai asisten koki pribadi Anda. Cukup sebutkan bahan makanan yang ada di kulkas (atau unggah fotonya), dan AI akan meracik resep masakan yang lezat, lengkap dengan estimasi waktu, tingkat kesulitan, dan instruksi langkah demi langkah.
 
@@ -34,5 +34,5 @@ Pastikan Anda sudah menginstal **Node.js** di komputer Anda dan memiliki **API K
 
 ### 1. Kloning Repository
 ```bash
-git clone [https://github.com/username-lo/smart-chef-ai.git](https://github.com/username-lo/smart-chef-ai.git)
-cd smart-chef-ai
+git clone [https://github.com/faridrahmatillah/Smart-Chef-AI.git](https://github.com/faridrahmatillah/Smart-Chef-AI.git)
+cd Smart-Chef-AI
