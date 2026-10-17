@@ -13,11 +13,17 @@ app.use(express.json({ limit: '10mb' })); // Limit besar karena menerima gambar 
 // Inisialisasi Gemini SDK
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
+// Health Check Endpoint untuk platform hosting (Render/Railway)
+app.get('/', (req, res) => {
+    res.status(200).json({ message: "Smart Chef AI Backend is running smoothly!" });
+});
+
 app.post('/api/generate-recipe', async (req, res) => {
     try {
         const { imageBase64, mimeType, textPrompt } = req.body;
 
-        const model = genAI.getGenerativeModel({ model: 'gemini-3.5-flash' });
+        // Gunakan model yang valid: gemini-1.5-flash
+        const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
         const systemPrompt = `
         Kamu adalah koki profesional Michelin Star. Analisis gambar/teks bahan makanan berikut, dan buatkan 1 resep masakan kreatif.
@@ -66,5 +72,5 @@ app.post('/api/generate-recipe', async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server Backend berjalan di http://localhost:${port}`);
+    console.log(`Server Backend berjalan di port ${port}`);
 });
